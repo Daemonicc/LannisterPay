@@ -45,7 +45,7 @@ app.post("/split-payments/compute", (req, res) => {
           rBalance -= Amount;
           splitBreakdown.push({
             SplitEntityId: splitItem.SplitEntityId,
-            Amount: Math.round(Amount * 100) / 100,
+            Amount,
           });
           //check if Amount comuputed is not greater than transaction amount || balace is less than 0
           if (Amount > paymentDetails.Amount || balance < 0) {
@@ -60,7 +60,7 @@ app.post("/split-payments/compute", (req, res) => {
           rBalance -= Amount;
           splitBreakdown.push({
             SplitEntityId: splitItem.SplitEntityId,
-            Amount: Math.round(Amount * 100) / 100,
+            Amount,
           });
           //check if Amount comuputed is not greater than transaction amount || balace is less than 0
 
@@ -76,7 +76,7 @@ app.post("/split-payments/compute", (req, res) => {
           balance -= Amount;
           splitBreakdown.push({
             SplitEntityId: splitItem.SplitEntityId,
-            Amount: Math.round(Amount * 100) / 100,
+            Amount,
           });
           //check if Amount comuputed is not greater than transaction amount || balace is less than 0
           if (Amount > paymentDetails.Amount || balance < 0) {
