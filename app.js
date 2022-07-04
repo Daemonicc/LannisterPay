@@ -50,7 +50,7 @@ app.post("/split-payments/compute", (req, res) => {
           //check if Amount comuputed is not greater than transaction amount || balace is less than 0
           if (Amount > paymentDetails.Amount || balance < 0 || Amount <= 0) {
             throw new Error(
-              "Invalid transaction. Balance after transaction less than zero, check SplitInfo Details"
+              "Invalid transaction. Balance after transaction less than zero or computed amount equal 0, check SplitInfo Details"
             );
           }
           break;
@@ -66,7 +66,7 @@ app.post("/split-payments/compute", (req, res) => {
 
           if (Amount > paymentDetails.Amount || balance < 0 || Amount <= 0) {
             throw new Error(
-              "Invalid transaction. Balance after transaction less than zero, check SplitInfo Details"
+              "Invalid transaction. Balance after transaction less than zero or computed amount equal 0, check SplitInfo Details"
             );
           }
           break;
@@ -81,7 +81,7 @@ app.post("/split-payments/compute", (req, res) => {
           //check if Amount comuputed is not greater than transaction amount || balace is less than 0
           if (Amount > paymentDetails.Amount || balance < 0 || Amount <= 0) {
             throw new Error(
-              "Invalid transaction. Balance after transaction less than zero, check SplitInfo Details"
+              "Invalid transaction. Balance after transaction less than zero or computed amount equal 0, check SplitInfo Details"
             );
           }
           break;
