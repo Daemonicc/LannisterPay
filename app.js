@@ -7,6 +7,7 @@ app.use(cors);
 app.use(express.json());
 
 app.post("/split-payments/compute", (req, res) => {
+  console.log("helllo sdasas");
   try {
     const paymentDetails = req.body;
 
